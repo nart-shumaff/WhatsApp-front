@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+  /* remove  */
+  background: linear-gradient(to right, #2b5876, #4e4376);
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+/* add font */
+
+/*  */
+
+/* hover */
+
+/*  */
+
+/* submit style */
+
+/*  */
+
+main {
+  /* remove  */
+  background-color: #0984e3;
+  max-width: 420px;
+  min-width: 220px;
+  max-height: 920px;
+  min-height: 440px;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex {
+  display: flex;
+}
+.shadow--border {
+  border-radius: 0.3rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+form {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+}
+header {
+  background-color: #74b9ff;
+  width: 100%;
+  overflow: hidden;
+}
+.inputs__continr {
+  /* background-color: aqua; */
+  height: 90%;
+}
+.input__container {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+}
+.pading--input {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+header {
+  border-radius: ;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/* Custom Shape Dividers */
+.custom-shape-divider-bottom-1658566049 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1658566049 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 111px;
+}
+
+.custom-shape-divider-bottom-1658566049 .shape-fill {
+  fill: #74b9ff;
+}
+/* Custom Shape Dividers */
