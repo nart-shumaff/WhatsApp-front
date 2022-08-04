@@ -100,7 +100,15 @@ header:hover {
 }
 
 /* hover */
-
+/*  */
+.fa-square-check {
+  color: rgb(29, 199, 29);
+  display: none;
+}
+.fa-xmark {
+  color: rgb(172, 11, 11);
+  display: none;
+}
 /*  */
 /* Custom Shape Dividers */
 .custom-shape-divider-bottom-1658566049 {
