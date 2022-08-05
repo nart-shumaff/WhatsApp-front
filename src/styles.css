@@ -13,6 +13,9 @@ body {
   align-content: center;
   justify-content: center;
 }
+.test {
+  background-color: black;
+}
 
 /* submit style */
 .submit-bt {
@@ -39,7 +42,7 @@ main {
   /* remove  */
   background-color: #0984e3;
   max-width: 420px;
-  min-width: 220px;
+  min-width: 270px;
   max-height: 920px;
   min-height: 440px;
   width: 90%;
@@ -47,6 +50,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .flex {
   display: flex;
@@ -81,17 +85,29 @@ header:hover {
 .inputs__container {
   /* background-color: aqua; */
   height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .input__container {
+  width: 90%;
   /* background-color: green; */
   display: flex;
   flex-direction: column;
+  /* align-items:center; */
+}
+.input__container label {
+  display: block;
 }
 
 .input__container input {
+  padding: 0;
+  display: block;
   border: 2px solid #2d3436;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
 }
 
 .pading--input {
@@ -101,13 +117,21 @@ header:hover {
 
 /* hover */
 /*  */
+.message {
+  display: flex;
+  flex-direction: row;
+}
+.err-message {
+  margin: 0;
+  padding: 0;
+}
 .fa-square-check {
   color: rgb(29, 199, 29);
-  display: none;
+  /* display: none; */
 }
 .fa-xmark {
   color: rgb(172, 11, 11);
-  display: none;
+  /* display: none; */
 }
 /*  */
 /* Custom Shape Dividers */
