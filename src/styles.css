@@ -102,11 +102,17 @@ header:hover {
 .input__container label {
   display: block;
 }
-
-.input__container input {
+.input--err {
   padding: 0;
   display: block;
-  border: 2px solid #2d3436;
+  border: 1px solid red;
+  border-radius: 0.2rem;
+}
+
+.input-- {
+  padding: 0;
+  display: block;
+  border: 1px solid #2d3436;
   border-radius: 0.2rem;
 }
 
