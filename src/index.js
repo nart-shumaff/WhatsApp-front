@@ -17,7 +17,7 @@ function validation() {
 function validatContent(value) {
   console.log(`Content value: ${value}`);
   //validat chak
-  let validLangth = value.langth >= 8;
+  let validLangth = value.langth <= 8;
   //if valid add "good" class
   if (validLangth) {
     addGoodToInput();
@@ -61,6 +61,9 @@ function validatTo_who(value) {
 
 function addErrToInput(input, err) {
   //add remove display none from fa-xmark;
+  input.classList.add("input--err");
+  input.classList.remove("input--");
+  console.log(`the err m- ${err}`);
   //from input
   //and chaege the p to err
 }
