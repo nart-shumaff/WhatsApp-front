@@ -45,23 +45,25 @@ function validatTime() {
 
   console.log(`time value: ${value}`);
   //validat chak
-  let valid = true;
+  let validTime = true;
   //if valid add "good" class
-  if (valid) {
-    addGoodToInput();
+  if (validTime) {
+    addGoodToInput(time);
   }
   //if notValid add "bad" class
-  if (!valid) {
+  if (!validTime) {
     addErrToInput(/* input obj ,and err */);
   }
 }
-function validatTo_who(value) {
+function validatTo_who() {
+  const value = to_who.value;
+
   console.log(`to_who value: ${value}`);
   //validat chak
   let valid = true;
   //if valid add "good" class
   if (valid) {
-    addGoodToInput();
+    addGoodToInput(to_who);
   }
   //if notValid add "bad" class
   if (!valid) {
@@ -73,6 +75,16 @@ function addErrToInput(input, err) {
   //add remove display none from fa-xmark;
   input.classList.add('input--err');
   input.classList.remove('input--');
+  // elementCheck =  div with p or p i
+  const elementCheck = document.getElementById(`${input.name}-check`);
+  // if  elementCheck is not jast p then remove i`s
+  if (elementCheck.childNodes.length > 1) {
+    elementCheck.removeChild(elementCheck.lastChild);
+  }
+  // errIcon = i with class fa-xmark and fa-xmark
+  const errIcon = document.createElement(`i`);
+  errIcon.classList.add('fa-xmark', 'fa-xmark');
+  elementCheck.appendChild(errIcon);
   const elementMessage = document.getElementById(`${input.name}Message`);
   elementMessage.innerText = err;
   console.log(`${elementMessage.innerText}Message`);
@@ -86,6 +98,16 @@ function addGoodToInput(input) {
   if (input.classList.contains('input--err')) {
     input.classList.remove('input--err');
   }
+  // elementCheck div with p
+  const elementCheck = document.getElementById(`${input.name}-check`);
+  // if  elementCheck is not jast p then remove i`s
+  if (elementCheck.childNodes.length > 1) {
+    elementCheck.removeChild(elementCheck.lastChild);
+  }
+  // checkIcon = i with class fa-square-check and fa-xmark
+  const checkIcon = document.createElement(`i`);
+  checkIcon.classList.add('fa-solid', 'fa-square-check');
+  elementCheck.appendChild(checkIcon);
   const elementMessage = document.getElementById(`${input.name}Message`);
   elementMessage.innerText = '';
   console.log(`${elementMessage.innerText}Message`);
