@@ -1,9 +1,9 @@
 /* add font */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 /*  */
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   padding: 0;
   margin: 0;
   /* remove  */
@@ -132,11 +132,11 @@ header:hover {
   padding: 0;
 }
 .fa-square-check {
-  color: rgb(29, 199, 29);
+  /* color: rgb(29, 199, 29); */
   /* display: none; */
 }
 .fa-xmark {
-  color: rgb(172, 11, 11);
+  /* color: rgb(172, 11, 11); */
   /* display: none; */
 }
 /*  */

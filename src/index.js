@@ -1,38 +1,47 @@
-const content = document.getElementById("content");
-const time = document.getElementById("time");
-const form = document.getElementById("form");
-const to_who = document.getElementById("to-who");
+const content = document.getElementById('content');
+const time = document.getElementById('time');
+const form = document.getElementById('form');
+const to_who = document.getElementById('to-who');
 
-form.addEventListener("submit", (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   validation();
 });
 
 function validation() {
-  validatContent(content.value);
-  validatTime(time.value);
-  validatTo_who(to_who.value);
+  validatContent();
+  //validatTime();
+  //validatTo_who();
 }
 
-function validatContent(value) {
+function validatContent() {
+  //
+  const value = content.value;
   console.log(`Content value: ${value}`);
   //validat chak
-  let validLangth = value.langth <= 8;
+
+  let validLength = value.length <= 8;
   //if valid add "good" class
-  if (validLangth) {
-    addGoodToInput();
+  console.log(`Content validLength: ${value.length}`);
+  console.log(`Content validLength: ${validLength}`);
+  if (validLength) {
+    addGoodToInput(content);
     console.log(`Content value:valid`);
-  }
-  //if notValid add "bad" class
-  if (!validLangth) {
+    //return true;
+  } else {
+    //if notValid add "bad" class(!validLength)
     console.log(`Content value:not valid`);
     addErrToInput(
       content,
-      "invalid langth, 8 or less" /* input obj ,and err */
+      'invalid langth, 8 or less' /* input obj ,and err */
     );
+    //return false;
   }
+  // return
 }
-function validatTime(value) {
+function validatTime() {
+  const value = time.value;
+
   console.log(`time value: ${value}`);
   //validat chak
   let valid = true;
@@ -61,8 +70,11 @@ function validatTo_who(value) {
 
 function addErrToInput(input, err) {
   //add remove display none from fa-xmark;
-  input.classList.add("input--err");
-  input.classList.remove("input--");
+  input.classList.add('input--err');
+  input.classList.remove('input--');
+  const elementMessage = document.getElementById(`${input.name}Message`);
+  elementMessage.innerText = err;
+  console.log(`${elementMessage.innerText}Message`);
   console.log(`the err m- ${err}`);
   //from input
   //and chaege the p to err
@@ -70,5 +82,12 @@ function addErrToInput(input, err) {
 
 function addGoodToInput(input) {
   //add remove display none from fa-square-check;
+  if (input.classList.contains('input--err')) {
+    input.classList.remove('input--err');
+  }
+  const elementMessage = document.getElementById(`${input.name}Message`);
+  elementMessage.innerText = '';
+  console.log(`${elementMessage.innerText}Message`);
+
   //from input
 }
