@@ -139,6 +139,9 @@ header:hover {
   color: rgb(172, 11, 11);
   /* display: none; */
 }
+.display--none {
+  display: none;
+}
 /*  */
 /* Custom Shape Dividers */
 .custom-shape-divider-bottom-1658566049 {

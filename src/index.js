@@ -21,21 +21,22 @@ function validatContent() {
   //validat chak
 
   let validLength = value.length <= 8;
+  let validNotEmpty = value.length !== 0;
   //if valid add "good" class
   console.log(`Content validLength: ${value.length}`);
   console.log(`Content validLength: ${validLength}`);
-  if (validLength) {
+  if (validLength && validNotEmpty) {
     addGoodToInput(content);
     console.log(`Content value:valid`);
     //return true;
-  } else {
+  } else if (!validNotEmpty) {
     //if notValid add "bad" class(!validLength)
-    console.log(`Content value:not valid`);
-    addErrToInput(
-      content,
-      'invalid langth, 8 or less' /* input obj ,and err */
-    );
+    console.log(`Content value:not valid Empty`);
+    addErrToInput(content, 'Content cant be empty');
     //return false;
+  } else {
+    console.log(`Content value:not valid langth`);
+    addErrToInput(content, 'invalid langth, 8 or less');
   }
   // return
 }
