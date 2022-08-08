@@ -132,11 +132,11 @@ header:hover {
   padding: 0;
 }
 .fa-square-check {
-  /* color: rgb(29, 199, 29); */
+  color: rgb(29, 199, 29);
   /* display: none; */
 }
 .fa-xmark {
-  /* color: rgb(172, 11, 11); */
+  color: rgb(172, 11, 11);
   /* display: none; */
 }
 /*  */
